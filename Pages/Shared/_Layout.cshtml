@@ -100,9 +100,6 @@
         </ul>
     </nav>
 
-        <main role="main">
-            @RenderBody()
-        </main>
    <picture>
        <!-- https://addyosmani.com/blog/lazy-loading/ (See: `loading="lazy")-->
        <!-- https://msdn.microsoft.com/en-us/vstudio/dn265036(v=vs.80) (See: lazyload="1") -->
@@ -120,9 +117,13 @@
         <img src="~/img/portrait.gif" alt="Portrait of Adrian D. Alvarez" class="portrait" loading="lazy" lazyload="1" />
     </picture>
 
-        <footer role="contentinfo">
-         &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
-        </footer>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer role="contentinfo">
+        &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
+    </footer>
 
 </body>
 </html>
