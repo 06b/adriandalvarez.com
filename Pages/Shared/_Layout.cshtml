@@ -103,6 +103,22 @@
         <main role="main">
             @RenderBody()
         </main>
+   <picture>
+       <!-- https://addyosmani.com/blog/lazy-loading/ (See: `loading="lazy")-->
+       <!-- https://msdn.microsoft.com/en-us/vstudio/dn265036(v=vs.80) (See: lazyload="1") -->
+       <!-- If cross-browser support for lazy-loading images is important: https://www.smashingmagazine.com/2019/05/hybrid-lazy-loading-progressive-migration-native/ -->
+        <source data-srcset="~/img/portrait.webp" type="image/webp" loading="lazy" lazyload="1">
+        <source data-srcset="~/img/portrait.png" type="image/png" loading="lazy" lazyload="1">
+        <!-- Fall back for browsers that don't support Picture (IE, Edge 12, etc) https://caniuse.com/#search=picture -->
+        <!-- Browsers with PNG support issues (See below) -->
+        <!-- https://en.wikipedia.org/wiki/Portable_Network_Graphics#Web_browser_support_for_PNG -->
+        <!-- https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support -->
+        <!-- Support: WorldWideWeb(Browser) aka Nexus does not support PNG but does support Gif -->
+        <!-- Tested on https://worldwideweb.cern.ch/ - no image loaded, it is possible it doesn't support <img>. Confirmed (https://remysharp.com/2019/02/12/cern-day-1#simulation) -->
+        <!-- Mosaic suggested creating the IMG element (https://thehistoryoftheweb.com/the-origin-of-the-img-tag/) -->
+        <!-- TODO: Test Mosaic http://adrianroselli.com/2013/04/ncsa-moscaic-turns-20.html -->
+        <img src="~/img/portrait.gif" alt="Portrait of Adrian D. Alvarez" class="portrait" loading="lazy" lazyload="1" />
+    </picture>
 
         <footer role="contentinfo">
          &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
