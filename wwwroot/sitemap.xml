@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://adriandalvarez.com/</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/Content/pdfs/AdrianDAlvarez_Resume.pdf</loc>
+  <lastmod>2018-11-26T18:01:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/hypertext/log/CindyLi</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/hypertext/log/destruction-of-our-past</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/ignite</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/citizensbank</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/eyemed</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/harris</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/audi</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/ignite/alignment</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/ignite/unification</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://adriandalvarez.com/portfolio/ignite/accessibility</loc>
+  <lastmod>2019-01-01T01:24:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

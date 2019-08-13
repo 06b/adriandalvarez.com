@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+@* <!--
+    Support: Accessibility (A11y)
+    Details: <html> element must have a lang attribute.
+    Supporting Details: https://webhint.io/docs/user-guide/hints/hint-axe/language/
+    Additional Details: Difference between lang="en" and lang="en-US" https://stackoverflow.com/questions/11318961/what-is-the-difference-between-html-lang-en-and-html-lang-en-us#11319263
+    Fix: Add a lang attribute to the html element (e.g. <html lang="en">) whose value represents the primary language of document.
+--> *@
+<html lang="en" dir="ltr" class="no-js" prefix="og:http://ogp.me/ns#">
+<head>
+    @*<!--
+        Support: Compatibility
+        Details: To consistently ensure proper document rendering, every HTML page should explicity declare the character encoding.
+        Supporting Details: https://webhint.io/docs/user-guide/hints/hint-meta-charset-utf-8/
+        Fix: Set character encoding for the document to utf-8.
+    -->*@
+    <meta charset="utf-8" />
+    @*<!--
+        Support: Compatibility
+        Details: The viewport meta tag is an essential part of responsive web design, that may also offer some performance improvements.
+        Supporting Details: https://webhint.io/docs/user-guide/hints/hint-meta-viewport/
+        Fix: Set the viewport to include `width=device-width` & `initial-scale=1` (Safari for iOS < 9)
+    --> *@
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    @*<!--
+        Support: Security (Event 1058 - Codepage Sniffing) & Compatibility
+        Details: The above 2 meta tags *must* come first in the <head> to consistently ensure proper document rendering.
+                 Any other head element should come *after* these tags.
+        Supporting Details: https://github.com/joshbuchea/HEAD#recommended-minimum
+        Additional Details: 1). https://webhint.io/docs/user-guide/hints/hint-meta-charset-utf-8/#why-is-this-important
+                            2). https://html.spec.whatwg.org/multipage/semantics.html#charset
+        Note: In Additional Details #2 - the UTF-8 character encoding declaration must be serialized completely
+              within the first 1024 bytes of the document as some browsers only look at those bytes before choosing
+              an encoding. By being the first thing in the <head>, this ensures it is before any content that could
+              be controlled by an attacker, such as a <title> element, thus avoiding potential encoding-related
+              security issues; such as the one in old IE:
+              https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/dd565635(v=vs.85).
+        --> *@
+    <title>@ViewData["Title"] - Adrian D. Alvarez</title>
+    <meta content="@ViewData["Title"] - Adrian D. Alvarez" name="twitter:title" property="og:title">
+    <meta content="Adrian D. Alvarez" name="author">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @*<!--
+        Support: FOUC - Remove `no-js` class.
+        Details: Allows you to know, in your CSS, whether or not JavaScript is enabled.
+        Supporting Details: https://www.paulirish.com/2009/avoiding-the-fouc-v3/
+        Fix: Scripts in the body block rendering, so scripts should be kept near </body> however this
+            one script is small enough to be an exception; to modify the class on the <html> element
+            while in the <head> element as it will have access to it while in the <head> which should
+            reduce FOUC.
+    -->*@
+   <environment include="Development">
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,"js");
+    </script>
+    </environment>
+    <environment exclude="Development">
+    <script>
+        !function (e) { e.className = e.className.replace(/\bno-js\b/, "js") }(document.documentElement);
+    </script>
+    </environment>
+
+    @*<!--
+        Support: Privacy - Twitter
+        Details: If a site embeds tweets - prevent Twitter from tracking your visitors
+        Supporting Details: https://twitter.com/bcrypt/status/903724091143630848
+    -->*@
+    <meta content="on" name="twitter:dnt">
+</head>
+<body id="adriandalvarez-com">
+
+        <main role="main">
+            @RenderBody()
+        </main>
+
+</body>
+</html>
