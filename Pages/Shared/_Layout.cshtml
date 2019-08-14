@@ -40,7 +40,13 @@
     <meta content="@ViewData["Title"] - Adrian D. Alvarez" name="twitter:title" property="og:title">
     <meta content="Adrian D. Alvarez" name="author">
 
-    <link rel="stylesheet" href="~/css/site.css" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/tokens.css" />
+        <link rel="stylesheet" href="~/css/base.page.css" />
+    </environment>
+    <environment exclude="Development">
+        <!-- TODO: Create Production Build of css -->
+    </environment>
 
     @*<!--
         Support: FOUC - Remove `no-js` class.
