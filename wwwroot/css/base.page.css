@@ -1,0 +1,15 @@
+/**
+ * Document
+ *
+ * 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+ * 2. Disable stylelint rule as border-box performance impact isn't significant when using the universal selector - https://www.paulirish.com/2012/box-sizing-border-box-ftw/#content
+ *
+ */
+
+/* stylelint-disable selector-max-universal */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* 1 */ /* 2 */
+}
+/* stylelint-enable selector-max-universal */
