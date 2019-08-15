@@ -13,3 +13,16 @@
     box-sizing: border-box; /* 1 */ /* 2 */
 }
 /* stylelint-enable selector-max-universal */
+
+/**
+ * Support: Accessibility (A11y)
+ * Details: WCAG 2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)
+ * Supporting Details: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-focus-visible
+ * Additional Details: http://www.outlinenone.com
+ * Additional Details: https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/
+ *
+ */
+
+:focus {
+    outline: 2px dashed currentColor;
+}
