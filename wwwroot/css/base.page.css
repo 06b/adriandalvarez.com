@@ -21,8 +21,14 @@
  * Additional Details: http://www.outlinenone.com
  * Additional Details: https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/
  *
+ * Support: IE11 - https://github.com/06b/adriandalvarez.com/issues/18
+ * Details: According to Focusable Elements - Browser Compatibility Table by ally.js the <html> & <body> elements are tabbable (keyboard focusable) for IE.
+ *          Also while the <html> element itself is not considered focusable, but some browsers may give it focus when focus is passed from browser UI to the document.
+ * Supporting Details: https://allyjs.io/data-tables/focusable.html
+ * Fix: Apply `:focus` to styles on child elements of the <body> rather than globally to all document elements which would include <html> & <body>.
+ *
  */
 
-:focus {
+body :focus {
     outline: 2px dashed currentColor;
 }
