@@ -38,6 +38,36 @@ body {
 }
 
 /**
+ * !!!Non-Standard!!! `font-smooth` is non-standard and is not on a standards track. - https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+ *
+ * Support: Typography - macOS
+ * Details: Usually one should use `fost-smoothing` on dark backgrounds only
+ * Supporting Details: http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+ * Additional Details: https://caniuse.com/#search=font-smooth
+ * Additional Details: https://www.zachleat.com/web/font-smooth/
+ *
+ */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+       only screen and (-o-min-device-pixel-ratio: 13/10),
+       only screen and (min-resolution: 120dpi) {
+    /* High DPI Media Query - https://gist.github.com/marcedwards/3446599 */
+    body {
+    /* NOTE: On HDPi or retina screens, subpixel anti-aliasing is increasingly unnecessary to render an accurate portrayal of a glyph. - https://www.zachleat.com/web/font-smooth/#what%E2%80%99s-the-difference-between-these-modes%3F
+    Because we have enough pixels here (retina!) it shouldn't be a problem. It just renders more beautiful. */
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/**
  * Support: Accessibility (A11y)
  * Details: WCAG 2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)
  * Supporting Details: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-focus-visible
