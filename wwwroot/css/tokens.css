@@ -6,4 +6,25 @@
  */
 
 :root {
+
+/**
+ * Color Palette
+ *
+ * 1. Giving Colors More Colorful Names - https://www.viget.com/articles/naming-colors/
+ * 2. Overlay Opacity Value - Opacity of True Black (#000000) on White - https://www.viget.com/articles/equating-color-and-transparency/
+ *
+ * Variable Name | RGB Value | HEX Value | Color Name (1) | Overlay Opacity (2)
+ */
+
+ --palette-neutral-0:   255, 255, 255; /* #ffffff - "White" - 0% */
+ --palette-neutral-10:  235, 235, 235; /* #ebebeb - "Smoke" - 7.8431372549019605% */
+
+ --palette-neutral-20:  190, 190, 190; /* #bebebe - "Silver" - 25.49019607843137% */
+ --palette-neutral-40:  134, 134, 134; /* #868686 - "Gray" - 47.45098039215686% */
+ --palette-neutral-60:  85, 85, 85;    /* #555555 - "Ash" - 66.66666666666666% */
+ --palette-neutral-80:  50, 50, 50;    /* #323232 - "Shaft" - 80.3921568627451% */
+
+ --palette-neutral-90:  28, 28, 28;    /* #1c1c1c - "Nero" - 89.01960784313725% */
+ --palette-neutral-100: 0, 0, 0;       /* #000000 - "Black" - 100% */
+
 }
