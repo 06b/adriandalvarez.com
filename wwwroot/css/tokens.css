@@ -12,6 +12,7 @@
  *
  * 1. Giving Colors More Colorful Names - https://www.viget.com/articles/naming-colors/
  * 2. Overlay Opacity Value - Opacity of True Black (#000000) on White - https://www.viget.com/articles/equating-color-and-transparency/
+ * 3. Design Tip: Never Use Black: http://ianstormtaylor.com/design-tip-never-use-black/
  *
  * Variable Name | RGB Value | HEX Value | Color Name (1) | Overlay Opacity (2)
  */
@@ -25,6 +26,6 @@
  --palette-neutral-80:  50, 50, 50;    /* #323232 - "Shaft" - 80.3921568627451% */
 
  --palette-neutral-90:  28, 28, 28;    /* #1c1c1c - "Nero" - 89.01960784313725% */
- --palette-neutral-100: 0, 0, 0;       /* #000000 - "Black" - 100% */
+ --palette-neutral-100: 1, 1, 1;       /* #111111 - "Black" - 99.6078431372549% */
 
 }
