@@ -46,24 +46,29 @@ body {
  * Additional Details: https://caniuse.com/#search=font-smooth
  * Additional Details: https://www.zachleat.com/web/font-smooth/
  *
+ *
+ * 1. User prefers a dark color-scheme, so go ahead and use `font-smoothing`
+ * 2. On HDPi or retina screens, subpixel anti-aliasing is increasingly unnecessary to render an accurate portrayal of a glyph.
+ *    https://www.zachleat.com/web/font-smooth/#what%E2%80%99s-the-difference-between-these-modes%3F
+ *
+ *    Note: Because we have enough pixels here (retina!) it shouldn't be a problem. It just renders more beautiful.
+ *    High DPI Media Query - https://gist.github.com/marcedwards/3446599
+ *
  */
 
 @media (prefers-color-scheme: dark) {
     body {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; /* 1 */
+        -webkit-font-smoothing: antialiased; /* 1 */
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
        only screen and (-o-min-device-pixel-ratio: 13/10),
        only screen and (min-resolution: 120dpi) {
-    /* High DPI Media Query - https://gist.github.com/marcedwards/3446599 */
     body {
-    /* NOTE: On HDPi or retina screens, subpixel anti-aliasing is increasingly unnecessary to render an accurate portrayal of a glyph. - https://www.zachleat.com/web/font-smooth/#what%E2%80%99s-the-difference-between-these-modes%3F
-    Because we have enough pixels here (retina!) it shouldn't be a problem. It just renders more beautiful. */
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; /* 2 */
+        -webkit-font-smoothing: antialiased; /* 2 */
     }
 }
 
