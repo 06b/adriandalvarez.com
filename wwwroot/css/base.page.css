@@ -15,6 +15,23 @@
 /* stylelint-enable selector-max-universal */
 
 /**
+ * Body
+ *
+ * 1. !!!Experimental!!! Prevent adjustments of font size after orientation changes - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+ *      - (1a) Prefix for Edge 12+, Firefox for Android (49+) and in iOS
+ *      - (1b) Prefix for Firefox for Android (14-48)
+ *      - (1c) Prefix for IE on Windows Phone
+ *
+ */
+
+body {
+    -webkit-text-size-adjust: 100%; /* 1a */
+    -moz-text-size-adjust: 100%; /* 1b */
+    -ms-text-size-adjust: 100%; /* 1c */
+    text-size-adjust: 100%; /* 1 */
+}
+
+/**
  * Support: Accessibility (A11y)
  * Details: WCAG 2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)
  * Supporting Details: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-focus-visible
