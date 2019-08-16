@@ -41,7 +41,7 @@ body {
  * !!!Non-Standard!!! `font-smooth` is non-standard and is not on a standards track. - https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
  *
  * Support: Typography - macOS
- * Details: Usually one should use `fost-smoothing` on dark backgrounds only
+ * Details: Usually one should use `font-smoothing` on dark backgrounds only
  * Supporting Details: http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
  * Additional Details: https://caniuse.com/#search=font-smooth
  * Additional Details: https://www.zachleat.com/web/font-smooth/
