@@ -37,6 +37,7 @@ nav li::before {
 }
 
 nav a {
+    position: relative;
     padding: 0.75em;
     display: inline-block;
     text-underline-position: under;
@@ -64,5 +65,41 @@ nav a:hover
     nav a:hover {
         outline: 1px solid rgba(255, 255, 255, 0.01); /* 1 */
         text-decoration: underline dashed; /* 2 */
+    }
+}
+
+nav [aria-current="page"],
+nav [aria-current="page"]:hover,
+nav [aria-current="page"]:focus {
+    text-decoration: none;
+}
+
+nav [aria-current="page"]::before {
+    content: "";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    position: absolute;
+    top: 1rem;
+    left: 0.25rem;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    nav [aria-current="page"]::before {
+        animation: blink 1s infinite steps(1);
+    }
+
+    nav [aria-current="page"]:focus::before,
+    nav [aria-current="page"]:hover::before {
+        animation: none;
     }
 }
