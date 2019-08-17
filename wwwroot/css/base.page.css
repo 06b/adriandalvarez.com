@@ -15,6 +15,17 @@
 /* stylelint-enable selector-max-universal */
 
 /**
+ * HTML
+ *
+ * 1. Force scrollbars to always be visible to prevent awkward page jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally - http://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/
+ *
+ */
+
+html {
+    overflow-y: scroll; /* 1 */
+}
+
+/**
  * Body
  *
  * 1. !!!Experimental!!! Prevent adjustments of font size after orientation changes - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
