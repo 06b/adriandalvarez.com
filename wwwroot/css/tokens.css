@@ -18,41 +18,43 @@
  *
  */
 
- --palette-neutral-0:   255, 255, 255; /* #ffffff - "White" - 0% */
- --palette-neutral-10:  235, 235, 235; /* #ebebeb - "Smoke" - 7.8431372549019605% */
+    --palette-neutral-0:   255, 255, 255; /* #ffffff - "White" - 0% */
+    --palette-neutral-10:  235, 235, 235; /* #ebebeb - "Smoke" - 7.8431372549019605% */
 
- --palette-neutral-20:  190, 190, 190; /* #bebebe - "Silver" - 25.49019607843137% */
- --palette-neutral-40:  134, 134, 134; /* #868686 - "Gray" - 47.45098039215686% */
- --palette-neutral-60:  85, 85, 85;    /* #555555 - "Ash" - 66.66666666666666% */
- --palette-neutral-80:  50, 50, 50;    /* #323232 - "Shaft" - 80.3921568627451% */
+    --palette-neutral-20:  190, 190, 190; /* #bebebe - "Silver" - 25.49019607843137% */
+    --palette-neutral-40:  134, 134, 134; /* #868686 - "Gray" - 47.45098039215686% */
+    --palette-neutral-60:  85, 85, 85;    /* #555555 - "Ash" - 66.66666666666666% */
+    --palette-neutral-80:  50, 50, 50;    /* #323232 - "Shaft" - 80.3921568627451% */
 
- --palette-neutral-90:  28, 28, 28;    /* #1c1c1c - "Nero" - 89.01960784313725% */
- --palette-neutral-100: 1, 1, 1;       /* #111111 - "Black"(3) - 99.6078431372549% */
+    --palette-neutral-90:  28, 28, 28;    /* #1c1c1c - "Nero" - 89.01960784313725% */
+    --palette-neutral-100: 1, 1, 1;       /* #111111 - "Black"(3) - 99.6078431372549% */
 
 /**
  * Typography
  *
+ * 1. Default monospace user interface font in all browsers - https://github.com/csstools/sanitize.css/blob/master/typography.css
+ *
  */
 
- --font-family--sans-serif:
- /* fallback */ sans-serif,
- /* macOS emoji */ "Apple Color Emoji",
- /* Windows emoji */ "Segoe UI Emoji",
- /* Windows emoji */ "Segoe UI Symbol",
- /* Linux emoji */ "Noto Color Emoji";
+    --font-family--sans-serif:
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
 
- --font-family--monospace:
- /* fallback */ monospace,
- /* macOS emoji */ "Apple Color Emoji",
- /* Windows emoji */ "Segoe UI Emoji",
- /* Windows emoji */ "Segoe UI Symbol",
- /* Linux emoji */ "Noto Color Emoji";
+    --font-family--monospace: /* 1 */
+    /* fallback */ monospace,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
 
- --font-family--serif:
- /* fallback */ serif,
- /* macOS emoji */ "Apple Color Emoji",
- /* Windows emoji */ "Segoe UI Emoji",
- /* Windows emoji */ "Segoe UI Symbol",
- /* Linux emoji */ "Noto Color Emoji";
+    --font-family--serif:
+    /* fallback */ serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
 
 }
