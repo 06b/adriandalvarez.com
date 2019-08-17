@@ -1,0 +1,27 @@
+/**
+ * Elements - Images
+ *
+ * 1. Switch display mode to block, since that's what we usually want for images.
+ * 2. If image is made inline, it's likely you'll want middle vertical alignment.
+ * 3. Make images flexible by default.
+ * 4. Ensure images maintains aspect ratio when max-width comes into play.
+ * 5. Offset `alt` text from surrounding copy if images don't load.
+ * 6. Remove the border on images inside links in IE 10 and earlier.
+ * 7. Non-fluid images if you specify `width` and/or `height` attributes.
+ *
+ */
+
+ img {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+  max-width: 100%; /* 3 */
+  height: auto; /* 4 */
+  font-style: italic; /* 5 */
+  border-style: none; /* 6 */
+}
+
+img[width],
+img[height]
+{
+  max-width: none; /* 7 */
+}
