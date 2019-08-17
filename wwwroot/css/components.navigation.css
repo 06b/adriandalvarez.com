@@ -62,7 +62,7 @@ nav a:hover
 
 @supports (text-decoration-style: dashed) {
     nav a:hover {
-      outline: 1px solid rgba(255, 255, 255, 0.01); /* 1 */
-      text-decoration: underline dashed; /* 2 */
+        outline: 1px solid rgba(255, 255, 255, 0.01); /* 1 */
+        text-decoration: underline dashed; /* 2 */
     }
 }
