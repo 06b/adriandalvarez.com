@@ -35,3 +35,34 @@ nav li::before {
     content: "\200B"; /* 1 */
     position: absolute; /* 2 */
 }
+
+nav a {
+    padding: 0.75em;
+    display: inline-block;
+    text-underline-position: under;
+}
+
+nav a:hover
+{
+    /* Browsers that don't support `text-decoration-style: dashed` will hide underline on hover */
+    /* TODO: Maybe instead invert the text & background? */
+    text-decoration: none;
+}
+
+/**
+ * Support: Microsoft Edge Version 78+ & Google Chrome Version 76+
+ * Details: When using `text-underline-position: under;` it appears to cause a
+ *          performance issue when adjusting the `text-decoration-style` on hover.
+ * Supporting Details: https://bugs.chromium.org/p/chromium/issues/detail?id=991310
+ *
+ * 1. Force the browser to repaint the section in order to fix the hover delay.
+ * 2. Re-enable underline and then apply dashed style.
+ *
+ */
+
+@supports (text-decoration-style: dashed) {
+    nav a:hover {
+      outline: 1px solid rgba(255, 255, 255, 0.01); /* 1 */
+      text-decoration: underline dashed; /* 2 */
+    }
+}
