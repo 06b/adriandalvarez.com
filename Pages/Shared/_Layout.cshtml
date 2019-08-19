@@ -91,6 +91,7 @@
         @{
             string path = Context.Request.Path;
             path = path.ToLowerInvariant();
+                <a href="/hypertext/log" @{ if (path.Contains("hypertext")) { @currentPage }}>HyperText Log</a>
 
             bool home = (path == "/" || path == "/index" || path == "/index/");
             string currentPage = "aria-current=page";
@@ -103,7 +104,6 @@
                 <a href="/portfolio" @{ if (path.Contains("portfolio")) { @currentPage }}>Portfolio</a>
             </li>
             <li>
-                <a href="/hypertext/log" @{ if (path.Contains("hypertext")) { @currentPage }}>Hyper­Text Log</a>
             </li>
         </ul>
     </nav>
