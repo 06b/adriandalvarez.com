@@ -2,7 +2,7 @@
  * Elements - Images
  *
  * 1. Switch display mode to block, since that's what we usually want for images.
- * 2. If image is made inline, it's likely you'll want middle vertical alignment.
+ * 2. If image is made inline, it's likely you'll want middle vertical alignment. - https://github.com/mozdevs/cssremedy/issues/14
  * 3. Make images flexible by default.
  * 4. Ensure images maintains aspect ratio when max-width comes into play.
  * 5. Offset `alt` text from surrounding copy if images don't load.
