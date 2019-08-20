@@ -1,0 +1,54 @@
+/**
+ * Components - Window
+ *
+ */
+
+.window {
+    background-color: rgb(var(--palette-neutral-10));
+    border: 6px double;
+    border-color: rgb(var(--palette-neutral-80));
+    border-radius: 2px;
+    box-shadow: 6px 6px 0px rgb(var(--palette-neutral-100));
+    margin-top: 1.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .window {
+        background-color: rgb(var(--palette-neutral-10));
+        border-color: rgb(var(--palette-neutral-80));
+        box-shadow: 6px 6px 0px rgb(var(--palette-neutral-0));
+    }
+}
+
+.window__title {
+    background-color: rgb(var(--palette-neutral-90));
+    color: rgb(var(--palette-neutral-10));
+    font-family: var(--font-family--monospace);
+    padding: 0.2em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .window__title {
+        background-color: rgb(var(--palette-neutral-10));
+        color: rgb(var(--palette-neutral-90));
+    }
+}
+
+.window__body {
+    background-color: rgb(var(--palette-neutral-10));
+    color: rgb(var(--palette-neutral-90));
+    padding: 0.25em 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .window__body {
+        background-color: rgb(var(--palette-neutral-90));
+        color: rgb(var(--palette-neutral-10));
+    }
+}
+
+.window__body--dark {
+    background-color: rgb(var(--palette-neutral-90));
+    color: rgb(var(--palette-neutral-10));
+}
+
