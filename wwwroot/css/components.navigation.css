@@ -59,7 +59,7 @@ nav a:hover
  * Support: Microsoft Edge Version 78+ & Google Chrome Version 76+
  * Details: When using `text-underline-position: under;` it appears to cause a
  *          performance issue when adjusting the `text-decoration-style` on hover.
- * Supporting Details: https://bugs.chromium.org/p/chromium/issues/detail?id=991310
+ * Supporting Details: https://crbug.com/991310
  *
  * 1. Force the browser to repaint the section in order to fix the hover delay.
  * 2. Re-enable underline and then apply dashed style.
