@@ -41,6 +41,13 @@
     <meta content="Adrian D. Alvarez" name="author">
 
     <environment include="Development">
+        <!-- tools.*.css will only appear in Development. -->
+            <!-- Helps visually detect any potentially invalid, inaccessible or erroneous HTML markup -->
+                <link rel="stylesheet" href="~/css/tools.diagnosticss.css" />
+                <link rel="stylesheet" href="~/css/tools.revenge.css" />
+
+        <!-- /end tools.*.css will only appear in Development. -->
+
         <link rel="stylesheet" href="~/css/tokens.css" />
         <link rel="stylesheet" href="~/css/base.page.css" />
         <link rel="stylesheet" href="~/css/elements.images.css" />
