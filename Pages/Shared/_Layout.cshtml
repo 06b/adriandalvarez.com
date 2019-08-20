@@ -80,34 +80,36 @@
 </head>
 <body id="adriandalvarez-com">
 
-    <!-- using `aria-labelledby` instead of `aria-label` http://www.heydonworks.com/article/aria-label-is-a-xenophobe -->
-    <nav aria-labelledby="navigation-heading" role="navigation">
-        <span id="navigation-heading">Site
+    <details class="window" open>
+        <summary id="navigation-heading" class="window__title">Site
             <!-- TODO: Test in screen readers.
             Hide the word "navigation" from screen readers to avoid redundant announcing of `navigation`
             https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role#Redundant_descriptions
             -->
             <span aria-hidden="true">Navigation</span>
-        </span>
-        @{
-            string path = Context.Request.Path;
-            path = path.ToLowerInvariant();
-                <a href="/hypertext/log" @{ if (path.Contains("hypertext")) { @currentPage }}>HyperText Log</a>
+        </summary>
+        <!-- using `aria-labelledby` instead of `aria-label` http://www.heydonworks.com/article/aria-label-is-a-xenophobe -->
+        <nav aria-labelledby="navigation-heading" role="navigation">
+            @{
+                string path = Context.Request.Path;
+                path = path.ToLowerInvariant();
 
-            bool home = (path == "/" || path == "/index" || path == "/index/");
-            string currentPage = "aria-current=page";
-        }
-        <ul>
-            <li>
-                <a href="/" @{ if (home) { @currentPage }}>Home</a>
-            </li>
-            <li>
-                <a href="/portfolio" @{ if (path.Contains("portfolio")) { @currentPage }}>Portfolio</a>
-            </li>
-            <li>
-            </li>
-        </ul>
-    </nav>
+                bool home = (path == "/" || path == "/index" || path == "/index/");
+                string currentPage = "aria-current=page";
+            }
+            <ul class="window__body window__body--dark">
+                <li>
+                    <a href="/" @{ if (home) { @currentPage }}>Home</a>
+                </li>
+                <li>
+                    <a href="/portfolio" @{ if (path.Contains("portfolio")) { @currentPage }}>Portfolio</a>
+                </li>
+                <li>
+                <a href="/hypertext/log" @{ if (path.Contains("hypertext")) { @currentPage }}>HyperText Log</a>
+                </li>
+            </ul>
+        </nav>
+    </details>
 
    <picture>
         @*<!--
@@ -137,13 +139,20 @@
         <img src="~/img/portrait.gif" alt="Portrait of Adrian D. Alvarez" class="portrait" loading="lazy" lazyload="1" />
     </picture>
 
-    <main role="main">
-        @RenderBody()
-    </main>
+    <div class="window">
+        <div class="window__title">
+            Document Viewer: @ViewData["Title"]
+        </div>
+        <div class="window__body">
+            <main role="main">
+                @RenderBody()
+            </main>
 
-    <footer role="contentinfo">
-        &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
-    </footer>
+            <footer role="contentinfo">
+                &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
+            </footer>
+        </div>
+    </div>
 
 </body>
 </html>
