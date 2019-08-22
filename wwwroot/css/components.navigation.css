@@ -46,6 +46,7 @@ nav a {
     padding: 0.75em;
     display: inline-block;
     text-underline-position: under;
+    color: currentColor;
 }
 
 nav a:hover
