@@ -12,7 +12,7 @@ Support does not mean that everybody gets the same thing. Expecting two users us
 
    *Summary: A-grade browsers are capable, modern and common. Examples of A-grade browsers include latest stable version of Edge, Firefox, Chrome, Safari, etc.*
 
-* **X-grade** - X-grade provides support for unknown, fringe or rare browsers as well as browsers on which development has ceased. Browsers receiving X-grade support are assumed to be capable. (If a browser is shown to be incapable — if it chokes on modern methodologies and its user would be better served without decoration or functionality — then it should considered a C-grade browser.) — [Ref. 1](#References)
+* **X-grade** - X-grade provides support for unknown, fringe or rare browsers as well as browsers on which development has ceased. Browsers receiving X-grade support are assumed to be capable. (If a browser is shown to be incapable — if it chokes on modern methodologies and its user would be better served without decoration or functionality — then it should considered a C-grade browser.) — [Ref. 1](#References) Bug fixes & other coding to specific X-grade browsers should be avoided with the exception of new standards-compliance or extreme circumstances.
 
    *Summary: X-grade browsers are assumed to be capable and modern. Examples of X-grade browsers include Nightly/Canary/Preview/Developer Builds*
 
