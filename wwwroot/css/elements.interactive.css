@@ -1,0 +1,22 @@
+/**
+ * Elements - Interactive elements
+ *
+ * Normalization of interactive elements as per https://github.com/necolas/normalize.css/commit/55ed05a79c0fd7a9a2c330c6925b982a7d5b307c
+ *
+ */
+
+/**
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/**
+ * Add the correct display in all browsers.
+ */
+
+summary {
+    display: list-item;
+}
