@@ -1,0 +1,35 @@
+/**
+ * Components - Portrait
+ *
+ */
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/**
+ * Support: UI
+ * Details: Scaling an image larger than it's natural size causes it to be blurry.
+ * Supporting Details: https://css-tricks.com/keep-pixelated-images-pixelated-as-they-scale/
+ * Additional Details: https://code.flickr.net/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ *
+ * 1. IE accomplishes support using the non-standard declaration `-ms-interpolation-mode: nearest-neighbor`.
+ * 2. `-ms-interpolation-mode` is not available in EdgeHTML Mode: https://docs.microsoft.com/en-us/openspecs/ie_standards/ms-css21e/baca27b8-6192-4c3e-af0b-9c0875ad7030
+ * 3. Chrome Supports `pixelated` but not `crisp-edges`.
+ * 4. Firefox 3.6-64 requires `-moz` for `crisp-edges`.
+ * 5. Safari 6.1-9.1 requires `-webkit` prefix for `crisp-edges`.
+ * 6. Firefox 65+ supports `crisp-edges` but not `pixelated`.
+ *
+ */
+
+.portrait img {
+    -ms-interpolation-mode: nearest-neighbor; /* 1 */ /* 2 */
+    image-rendering: pixelated; /* 3 */
+    image-rendering: -moz-crisp-edges; /* 4 */
+    image-rendering: -webkit-crisp-edges; /* 5 */
+    image-rendering: crisp-edges; /* 6 */
+    width: 100%;
+}
