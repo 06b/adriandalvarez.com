@@ -24,7 +24,7 @@
     background-color: rgb(var(--palette-neutral-90));
     color: rgb(var(--palette-neutral-10));
     font-family: var(--font-family--monospace);
-    padding: 0.2em;
+    padding: 0.25em;
 }
 
 @media (prefers-color-scheme: dark) {
