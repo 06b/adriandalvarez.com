@@ -16,10 +16,17 @@ details {
 /**
  * Add the correct display in all browsers.
  *
- * 1. Remove bullet which appears in IE & NetSurf
+ * 1. Remove bullet which appears in IE & NetSurf.
+ * 2. Reapply triangle style for Firefox.
+ *
  */
 
 summary {
     display: list-item;
     list-style-type: none; /* 1 */
+    list-style-type: disclosure-closed; /* 2 */
+}
+
+details[open] > summary {
+    list-style-type: disclosure-open; /* 2 */
 }
