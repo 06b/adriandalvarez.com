@@ -15,8 +15,11 @@ details {
 
 /**
  * Add the correct display in all browsers.
+ *
+ * 1. Remove bullet which appears in IE & NetSurf
  */
 
 summary {
     display: list-item;
+    list-style-type: none; /* 1 */
 }
