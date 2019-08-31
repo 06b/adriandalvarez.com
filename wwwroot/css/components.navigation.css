@@ -1,11 +1,15 @@
 /**
  * Components - Navigation
  *
+ *
+ * 1. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
+ *
  * TODO: Review Ensure that `nav ul` styles are not bad for accessibility - https://github.com/mozdevs/cssremedy/issues/15
  *
  */
 
 nav {
+    font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
     font-family: var(--font-family--monospace);
 }
 

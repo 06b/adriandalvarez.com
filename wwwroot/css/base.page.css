@@ -38,6 +38,8 @@ html {
  *    `text-rendering: optimizeLegibility;` instructs the browser to emphasizes legibility over rendering speed and geometric precision and enables
  *    kerning and optional ligatures.
  *
+ * 3. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
+ *
  */
 
 body {
@@ -46,7 +48,9 @@ body {
     -ms-text-size-adjust: 100%; /* 1c */
     text-size-adjust: 100%; /* 1 */
     text-rendering: optimizeLegibility; /* 2 */
+    background-color: #fff; /* 3 */
     background-color: rgba(var(--palette-neutral-0), 1);
+    background-image: repeating-linear-gradient(-45deg, rgba(28,28,28, 0.25), rgba(28, 28, 28, 0.25) 1px, transparent 1px, transparent 6px); /* 3 */
     background-image: repeating-linear-gradient(-45deg, rgba(var(--palette-neutral-90), 0.25), rgba(var(--palette-neutral-90), 0.25) 1px, transparent 1px, transparent 6px); /* texture patterns - https://codepen.io/bitmap/pen/jfKxm */
     background-size: 4px 4px;
 }

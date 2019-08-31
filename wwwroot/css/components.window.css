@@ -1,54 +1,68 @@
 /**
  * Components - Window
  *
+ * 1. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
+ * 2. Browsers that support prefers-color-scheme (https://caniuse.com/#search=prefers-color-scheme)
+ *    also support Custom Properties (https://caniuse.com/#search=Custom%20Properties), so don't worry about fallbacks.
+ *
  */
 
 .window {
+    background-color: #ebebeb; /* 1 */
     background-color: rgb(var(--palette-neutral-10));
     border: 6px double;
+    border-color: #323232; /* 1 */
     border-color: rgb(var(--palette-neutral-80));
     border-radius: 2px;
+    box-shadow: 6px 6px 0px #111111; /* 1 */
     box-shadow: 6px 6px 0px rgb(var(--palette-neutral-100));
     margin-top: 1.5em;
 }
 
 @media (prefers-color-scheme: dark) {
     .window {
-        background-color: rgb(var(--palette-neutral-10));
-        border-color: rgb(var(--palette-neutral-80));
-        box-shadow: 6px 6px 0px rgb(var(--palette-neutral-0));
+        background-color: rgb(var(--palette-neutral-10)); /* 2 */
+        border-color: rgb(var(--palette-neutral-80)); /* 2 */
+        box-shadow: 6px 6px 0px rgb(var(--palette-neutral-0)); /* 2 */
     }
 }
 
 .window__title {
+    background-color: #1c1c1c; /* 1 */
     background-color: rgb(var(--palette-neutral-90));
+    color: #ebebeb; /* 1 */
     color: rgb(var(--palette-neutral-10));
+    font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
     font-family: var(--font-family--monospace);
     padding: 0.25em;
 }
 
 @media (prefers-color-scheme: dark) {
     .window__title {
-        background-color: rgb(var(--palette-neutral-10));
-        color: rgb(var(--palette-neutral-90));
+        background-color: rgb(var(--palette-neutral-10)); /* 2 */
+        color: rgb(var(--palette-neutral-90)); /* 2 */
     }
 }
 
 .window__body {
+    background-color: #ebebeb; /* 1 */
     background-color: rgb(var(--palette-neutral-10));
+    color: #1c1c1c; /* 1 */
     color: rgb(var(--palette-neutral-90));
     padding: 0.25em 0.5em;
 }
 
 @media (prefers-color-scheme: dark) {
     .window__body {
-        background-color: rgb(var(--palette-neutral-90));
-        color: rgb(var(--palette-neutral-10));
+        background-color: rgb(var(--palette-neutral-90)); /* 2 */
+        color: rgb(var(--palette-neutral-10)); /* 2 */
     }
 }
 
 .window__body--dark {
+    background-color: #1c1c1c; /* 1 */
     background-color: rgb(var(--palette-neutral-90));
+    color: #ebebeb; /* 1 */
     color: rgb(var(--palette-neutral-10));
 }
 
