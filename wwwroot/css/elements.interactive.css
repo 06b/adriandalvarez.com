@@ -30,3 +30,14 @@ summary {
 details[open] > summary {
     list-style-type: disclosure-open; /* 2 */
 }
+
+/**
+ * Feature detection
+ *
+ * 1. Detect browsers that support `<details>` and apply pointer cursor to `<summary>`
+ *
+ */
+
+.details summary {
+    cursor: pointer;
+}
