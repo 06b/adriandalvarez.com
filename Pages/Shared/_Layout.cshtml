@@ -131,33 +131,35 @@
         </nav>
     </details>
 
-    <picture class="window portrait">
-        @*<!--
-            Support: Performance - Lazyloading
-            Supporting Details: Chrome - https://addyosmani.com/blog/lazy-loading/ (See: `loading="lazy")
-            Supporting Details: IE - https://msdn.microsoft.com/en-us/vstudio/dn265036(v=vs.80) (See: lazyload="1")
-            Additional Details: https://github.com/scott-little/lazyload
-            Note: If cross-browser support for lazy-loading images is important: https://www.smashingmagazine.com/2019/05/hybrid-lazy-loading-progressive-migration-native/
-        -->*@
-        <source srcset="~/img/portrait.webp" type="image/webp" loading="lazy" lazyload="1">
-        <source srcset="~/img/portrait.png" type="image/png" loading="lazy" lazyload="1">
-        @*<!--
-            Support: Compatibility - HTML features: browsers that don't support <picture> (IE, Edge 12, etc)
-            Supporting Details: https://caniuse.com/#search=picture
-            Fix: Fallback to <img> if <picture> isn't supported.
-        --> *@
-        <!-- Note: Browsers with PNG support issues (See below) -->
-        <!-- Additional Details: https://en.wikipedia.org/wiki/Portable_Network_Graphics#Web_browser_support_for_PNG -->
-        <!-- Additional Details: https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support -->
+    <div class="window portrait">
+        <picture>
+            @*<!--
+                Support: Performance - Lazyloading
+                Supporting Details: Chrome - https://addyosmani.com/blog/lazy-loading/ (See: `loading="lazy")
+                Supporting Details: IE - https://msdn.microsoft.com/en-us/vstudio/dn265036(v=vs.80) (See: lazyload="1")
+                Additional Details: https://github.com/scott-little/lazyload
+                Note: If cross-browser support for lazy-loading images is important: https://www.smashingmagazine.com/2019/05/hybrid-lazy-loading-progressive-migration-native/
+            -->*@
+            <source srcset="~/img/portrait.webp" type="image/webp" loading="lazy" lazyload="1">
+            <source srcset="~/img/portrait.png" type="image/png" loading="lazy" lazyload="1">
+            @*<!--
+                Support: Compatibility - HTML features: browsers that don't support <picture> (IE, Edge 12, etc)
+                Supporting Details: https://caniuse.com/#search=picture
+                Fix: Fallback to <img> if <picture> isn't supported.
+            --> *@
+            <!-- Note: Browsers with PNG support issues (See below) -->
+            <!-- Additional Details: https://en.wikipedia.org/wiki/Portable_Network_Graphics#Web_browser_support_for_PNG -->
+            <!-- Additional Details: https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support -->
 
-        <!-- Support: WorldWideWeb(Browser) aka Nexus does not support PNG but does support Gif -->
-        <!-- Note: Tested on https://worldwideweb.cern.ch/ - no image loaded, it is possible it doesn't support <img>.
-                   Confirmed - https://remysharp.com/2019/02/12/cern-day-1#simulation -->
+            <!-- Support: WorldWideWeb(Browser) aka Nexus does not support PNG but does support Gif -->
+            <!-- Note: Tested on https://worldwideweb.cern.ch/ - no image loaded, it is possible it doesn't support <img>.
+                    Confirmed - https://remysharp.com/2019/02/12/cern-day-1#simulation -->
 
-        <!-- Mosaic suggested creating the IMG element (https://thehistoryoftheweb.com/the-origin-of-the-img-tag/) -->
-        <!-- TODO: Test Mosaic http://adrianroselli.com/2013/04/ncsa-moscaic-turns-20.html -->
-        <img src="~/img/portrait.gif" alt="Portrait of Adrian D. Alvarez" loading="lazy" lazyload="1" width="96" height="96" />
-    </picture>
+            <!-- Mosaic suggested creating the IMG element (https://thehistoryoftheweb.com/the-origin-of-the-img-tag/) -->
+            <!-- TODO: Test Mosaic http://adrianroselli.com/2013/04/ncsa-moscaic-turns-20.html -->
+            <img src="~/img/portrait.gif" alt="Portrait of Adrian D. Alvarez" loading="lazy" lazyload="1" width="96" height="96" />
+        </picture>
+    </div>
 
     <div class="window">
         <div class="window__title">
