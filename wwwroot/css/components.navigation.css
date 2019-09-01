@@ -65,6 +65,7 @@ nav a {
     padding: 0.75em;
     display: inline-block;
     text-underline-position: under;
+    color: #ebebeb;
     color: currentColor;
 }
 
@@ -112,7 +113,8 @@ nav [aria-current="page"]:before {
     content: "";
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
-    border-left: 5px solid currentColor;
+    border-left: 5px solid #ebebeb;
+    border-left-color: currentColor;
     position: absolute;
     top: 1em;
     left: 0.25em;
