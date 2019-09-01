@@ -1,7 +1,6 @@
 /**
  * Components - Navigation
  *
- *
  * 1. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
  *
  * TODO: Review Ensure that `nav ul` styles are not bad for accessibility - https://github.com/mozdevs/cssremedy/issues/15
@@ -63,7 +62,7 @@ nav li:before {
 nav a {
     position: relative;
     padding: 0.75em;
-    display: inline-block;
+    display: block;
     text-underline-position: under;
     color: #ebebeb;
     color: currentColor;
