@@ -46,7 +46,16 @@ nav li {
  *
  */
 
-nav li::before {
+/**
+ * Support: Legacy Browsers - Pseudo-elements
+ * Details: The distinction between double colons & single colons were not present in older version of the spec,
+ *          the first pseudo-elements had single colons, so legacy browsers implemented it as so.
+ * Supporting Details: https://css-tricks.com/to-double-colon-or-not-do-double-colon/
+ * Additional Details: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements#Syntax
+ *
+ */
+
+nav li:before {
     content: "\200B"; /* 1 */
     position: absolute; /* 2 */
 }
@@ -90,7 +99,16 @@ nav [aria-current="page"]:focus {
     text-decoration: none;
 }
 
-nav [aria-current="page"]::before {
+/**
+ * Support: Legacy Browsers - Pseudo-elements
+ * Details: The distinction between double colons & single colons were not present in older version of the spec,
+ *          the first pseudo-elements had single colons, so legacy browsers implemented it as so.
+ * Supporting Details: https://css-tricks.com/to-double-colon-or-not-do-double-colon/
+ * Additional Details: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements#Syntax
+ *
+ */
+
+nav [aria-current="page"]:before {
     content: "";
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
