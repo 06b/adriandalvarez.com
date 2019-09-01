@@ -26,6 +26,21 @@ html {
 }
 
 /**
+ * Feature detection
+ *
+ * 1. The `box-shadow` from the window component causes the page to look off-centered, so after detecting browsers
+ *    that support `box-shadow` (via modernizr due to legacy browsers that support `box-shadow` but don't support
+ *    feature queries) - adjust the `html` element (as modernizr adds the class to the html element) to make the
+ *    layout more aligned and centered.
+ *
+ */
+
+.boxshadow{
+    position: relative;
+    left: -0.25em;
+}
+
+/**
  * Body
  *
  * 1. !!!Experimental!!! Prevent adjustments of font size after orientation changes - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
