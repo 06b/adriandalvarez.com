@@ -8,6 +8,13 @@
  *
  */
 
+details {
+    width: 23em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1.5em;
+}
+
 nav {
     font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
     font-family: var(--font-family--monospace);
@@ -27,7 +34,6 @@ nav ul {
 
 nav li {
     list-style-type: none; /* 2 */
-    display: inline-block;
 }
 
 /**
@@ -90,8 +96,8 @@ nav [aria-current="page"]::before {
     border-top: 5px solid transparent;
     border-left: 5px solid currentColor;
     position: absolute;
-    top: 1rem;
-    left: 0.25rem;
+    top: 1em;
+    left: 0.25em;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
