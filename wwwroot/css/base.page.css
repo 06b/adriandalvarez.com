@@ -72,6 +72,7 @@ body {
     min-width: 36.5em;
     max-width: 36.5em;
     width: 90%;
+    padding: 0 0.5em;
 }
 
 @supports (display: grid) {
@@ -81,6 +82,7 @@ body {
         grid-template-areas: "navigation" "portrait" "content";
         min-width: auto;
         max-width: none;
+        padding: 0;
     }
 
     @media (min-width: 20em) {
