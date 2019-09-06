@@ -20,6 +20,23 @@
     max-width: 35.5em;
 }
 
+@supports (display: grid) {
+    .window {
+        margin-top: 1em;
+        max-width: none;
+    }
+
+    @media (min-width: 30em) {
+        .window {
+            margin-top: 1.5em;
+        }
+    }
+
+    .window:nth-last-child(2) {
+        grid-area: content;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     .window {
         background-color: rgb(var(--palette-neutral-10)); /* 2 */

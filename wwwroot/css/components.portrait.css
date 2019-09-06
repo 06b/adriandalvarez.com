@@ -9,6 +9,28 @@
     display: inline-block;
 }
 
+@supports (display: grid) {
+    .portrait {
+        width: 100%;
+        height: auto;
+        grid-area: portrait;
+    }
+
+    @media (min-width: 33.5em) {
+        .portrait {
+            width: 10em;
+            height: 10em;
+        }
+    }
+
+    @media (min-width: 50em) {
+        .portrait {
+            width: 14em;
+            height: 14em;
+        }
+    }
+}
+
 /**
  * Support: UI
  * Details: Scaling an image larger than it's natural size causes it to be blurry.
@@ -31,4 +53,11 @@
     image-rendering: -webkit-crisp-edges; /* 5 */
     image-rendering: crisp-edges; /* 6 */
     width: 100%;
+}
+
+@supports (object-fit: cover) {
+    .portrait img {
+        object-fit: cover;
+        height: 100%;
+    }
 }
