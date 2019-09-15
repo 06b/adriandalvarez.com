@@ -130,7 +130,7 @@ body {
  *
  */
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: TODO-dark) {
     body {
         -moz-osx-font-smoothing: grayscale; /* 1 */
         -webkit-font-smoothing: antialiased; /* 1 */

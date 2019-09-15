@@ -37,7 +37,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: TODO-dark) {
     .window {
         background-color: rgb(var(--palette-neutral-10)); /* 2 */
         border-color: rgb(var(--palette-neutral-80)); /* 2 */
@@ -55,7 +55,7 @@
     padding: 0.25em;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: TODO-dark) {
     .window__title {
         background-color: rgb(var(--palette-neutral-10)); /* 2 */
         color: rgb(var(--palette-neutral-90)); /* 2 */
@@ -70,7 +70,7 @@
     padding: 0.25em 0.5em;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: TODO-dark) {
     .window__body {
         background-color: rgb(var(--palette-neutral-90)); /* 2 */
         color: rgb(var(--palette-neutral-10)); /* 2 */
