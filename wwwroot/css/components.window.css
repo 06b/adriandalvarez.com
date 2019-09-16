@@ -5,6 +5,8 @@
  * 2. Browsers that support prefers-color-scheme (https://caniuse.com/#search=prefers-color-scheme)
  *    also support Custom Properties (https://caniuse.com/#search=Custom%20Properties), so don't worry about fallbacks.
  *
+ * 3. Only apply box-shadow to browsers that also support CSS Feature Queries to reduce having to use js feature detection to fix a layout issue.
+ *
  */
 
 .window {
@@ -14,10 +16,15 @@
     border-color: #323232; /* 1 */
     border-color: rgb(var(--palette-neutral-80));
     border-radius: 2px;
-    box-shadow: 6px 6px 0px #111111; /* 1 */
-    box-shadow: 6px 6px 0px rgb(var(--palette-neutral-100));
     margin-top: 1.5em;
     max-width: 35.5em;
+}
+
+@supports (box-shadow: none) {
+    .window {
+        box-shadow: 6px 6px 0px #111111; /* 1 */ /* 3 */
+        box-shadow: 6px 6px 0px rgb(var(--palette-neutral-100)); /* 3 */
+    }
 }
 
 @supports (display: grid) {
@@ -41,7 +48,12 @@
     .window {
         background-color: rgb(var(--palette-neutral-10)); /* 2 */
         border-color: rgb(var(--palette-neutral-80)); /* 2 */
-        box-shadow: 6px 6px 0px rgb(var(--palette-neutral-0)); /* 2 */
+    }
+
+    @supports (box-shadow: none) {
+        .window {
+            box-shadow: 6px 6px 0px rgb(var(--palette-neutral-0)); /* 2 */ /* 3 */
+        }
     }
 }
 

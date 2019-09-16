@@ -18,6 +18,7 @@
  * HTML
  *
  * 1. Force scrollbars to always be visible to prevent awkward page jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally - http://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/
+ * 2. The `box-shadow` from the window component causes the page to look off-centered. If the browser supports `box-shadow` adjust the html element to make the layout appear more aligned and centered.
  *
  */
 
@@ -25,19 +26,11 @@ html {
     overflow-y: scroll; /* 1 */
 }
 
-/**
- * Feature detection
- *
- * 1. The `box-shadow` from the window component causes the page to look off-centered, so after detecting browsers
- *    that support `box-shadow` (via modernizr due to legacy browsers that support `box-shadow` but don't support
- *    feature queries) - adjust the `html` element (as modernizr adds the class to the html element) to make the
- *    layout more aligned and centered.
- *
- */
-
-.boxshadow{
-    position: relative;
-    left: -0.25em;
+@supports (box-shadow: none) {
+    html {
+        position: relative; /* 2 */
+        left: -0.25em; /* 2 */
+    }
 }
 
 /**
