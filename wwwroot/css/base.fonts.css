@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url("/fonts/source-serif-pro/SourceSerifPro-Regular.ttf.woff2") format('woff2'), url("/fonts/source-serif-pro/SourceSerifPro-Regular.ttf.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-display: swap;
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url("/fonts/source-serif-pro/SourceSerifPro-It.ttf.woff2") format('woff2'), url("/fonts/source-serif-pro/SourceSerifPro-It.ttf.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url("/fonts/source-serif-pro/SourceSerifPro-Bold.ttf.woff2") format('woff2'), url("/fonts/source-serif-pro/SourceSerifPro-Bold.ttf.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: url("/fonts/source-serif-pro/SourceSerifPro-BoldIt.ttf.woff2") format('woff2'), url("/fonts/source-serif-pro/SourceSerifPro-BoldIt.ttf.woff") format('woff')
+}
+
+@font-face {
+    font-family: 'Fira';
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/fira-sans/firasans-bold.woff2") format('woff2'), url("/fonts/fira-sans/firasans-bold.woff") format('woff');
+    }
+
+@font-face {
+    font-family: 'Fira';
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/fira-sans/firasans-bolditalic.woff2") format('woff2'), url("/fonts/fira-sans/firasans-bolditalic.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Fira';
+    font-display: swap;
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/fira-sans/firasans-bookitalic.woff2") format('woff2'), url("/fonts/fira-sans/firasans-bookitalic.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Fira';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/fira-sans/firasans-book.woff2") format('woff2'), url("/fonts/fira-sans/firasans-book.woff") format('woff');
+}
