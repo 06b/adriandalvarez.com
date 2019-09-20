@@ -62,3 +62,27 @@ body {
         -webkit-font-smoothing: antialiased; /* 2 */
     }
 }
+
+/**
+ * Headings
+ *
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes.
+ * Related: https://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+ * Related: https://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ *
+ * 1. Decrease the line-height of wrapped headings - https://twitter.com/heydonworks/status/672716556179283968
+ * 2. Remove bottom margin to ensure vertical rhythm - https://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    line-height: 1.125; /* 1 */
+    margin-bottom: 0;
+}
