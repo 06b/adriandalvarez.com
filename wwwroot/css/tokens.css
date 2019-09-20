@@ -33,6 +33,9 @@
  * Typography
  *
  * 1. Default monospace user interface font in all browsers - https://github.com/csstools/sanitize.css/blob/master/typography.css
+ * 2. Compatibility for default local fonts confirmed via - http://fontfamily.io/
+ * 3. List of products that supply Cambria - https://docs.microsoft.com/en-us/typography/font-list/cambria#products-that-supply-this-font
+ * 4. Caladea is a metric-adjusted version of Cambo which matches Cambria. https://wiki.debian.org/SubstitutingCalibriAndCambriaFonts, https://github.com/zachleat/font-family-reunion/issues/49 & https://en.wikipedia.org/wiki/Croscore_fonts
  *
  */
 
@@ -58,6 +61,14 @@
     /* Linux emoji */ "Noto Color Emoji";
 
     --font-family--serif:
+    /* @font-face */ "Source Serif Pro",
+    /* macOS - Mavericks 10.9.5 & iOS - iPhone 9.3 */ "Charter", /* 2 */
+    /* Ubuntu 14.04 / Fedora 20 */ "Bitstream Charter", /* 2 */
+    /* Windows 6+ / Windows Phone 8.0 / Fedora 20 / Office 2007 / Office Mac 2008 */ "Cambria", /* 2 */ /* 3 */
+    /* Chrome OS */ "Caladea", /* 4 */
+    /* macOS - Snow leopard 10.6.8 & iOS - iPhone 5.1 */ "Hoefler Text",
+    /* Linux/OpenOffice fallback */ "Liberation Serif", /* 2 */
+    /* Windows 5+ / Windows Phone 7.5 / Android 4+ (will render Noto Serif as it's Aliased as Georgia) */ "Georgia", /* 2 */
     /* fallback */ serif,
     /* macOS emoji */ "Apple Color Emoji",
     /* Windows emoji */ "Segoe UI Emoji",
