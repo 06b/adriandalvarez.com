@@ -11,7 +11,7 @@
  *
  */
 
- img {
+img {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
   max-width: 100%; /* 3 */
