@@ -36,27 +36,12 @@ html {
 /**
  * Body
  *
- * 1. !!!Experimental!!! Prevent adjustments of font size after orientation changes - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
- *      - (1a) Prefix for Edge 12+, Firefox for Android (49+) and in iOS
- *      - (1b) Prefix for Firefox for Android (14-48)
- *      - (1c) Prefix for IE on Windows Phone
- *
- * 2. !!!Non-Standard!!! The `text-rendering` property is an SVG property that is not defined in any CSS standard. - https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering
- *    However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
- *    `text-rendering: optimizeLegibility;` instructs the browser to emphasizes legibility over rendering speed and geometric precision and enables
- *    kerning and optional ligatures.
- *
- * 3. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
+ * 1. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
  *
  */
 
 body {
-    -webkit-text-size-adjust: 100%; /* 1a */
-    -moz-text-size-adjust: 100%; /* 1b */
-    -ms-text-size-adjust: 100%; /* 1c */
-    text-size-adjust: 100%; /* 1 */
-    text-rendering: optimizeLegibility; /* 2 */
-    background-color: #fff; /* 3 */
+    background-color: #fff; /* 1 */
     background-color: rgba(var(--palette-neutral-0), 1);
     background-image: repeating-linear-gradient(-45deg, rgba(28,28,28, 0.25), rgba(28, 28, 28, 0.25) 1px, transparent 1px, transparent 6px); /* 3 */
     background-image: repeating-linear-gradient(-45deg, rgba(var(--palette-neutral-90), 0.25), rgba(var(--palette-neutral-90), 0.25) 1px, transparent 1px, transparent 6px); /* texture patterns - https://codepen.io/bitmap/pen/jfKxm */
@@ -104,40 +89,10 @@ body {
     }
 }
 
-/**
- * !!!Non-Standard!!! `font-smooth` is non-standard and is not on a standards track. - https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
- *
- * Support: Typography - macOS
- * Details: Usually one should use `font-smoothing` on dark backgrounds only
- * Supporting Details: http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
- * Additional Details: https://caniuse.com/#search=font-smooth
- * Additional Details: https://www.zachleat.com/web/font-smooth/
- *
- *
- * 1. User prefers a dark color-scheme, so go ahead and use `font-smoothing`
- * 2. On HDPi or retina screens, subpixel anti-aliasing is increasingly unnecessary to render an accurate portrayal of a glyph.
- *    https://www.zachleat.com/web/font-smooth/#what%E2%80%99s-the-difference-between-these-modes%3F
- *
- *    Note: Because we have enough pixels here (retina!) it shouldn't be a problem. It just renders more beautiful.
- *    High DPI Media Query - https://gist.github.com/marcedwards/3446599
- *
- */
-
 @media (prefers-color-scheme: TODO-dark) {
     body {
-        -moz-osx-font-smoothing: grayscale; /* 1 */
-        -webkit-font-smoothing: antialiased; /* 1 */
         background-color: rgba(var(--palette-neutral-100), 1);
         background-image: repeating-linear-gradient(-45deg, rgba(var(--palette-neutral-0), 0.5), rgba(var(--palette-neutral-0), 0.5) 1px, transparent 1px, transparent 6px);
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-       only screen and (-o-min-device-pixel-ratio: 13/10),
-       only screen and (min-resolution: 120dpi) {
-    body {
-        -moz-osx-font-smoothing: grayscale; /* 2 */
-        -webkit-font-smoothing: antialiased; /* 2 */
     }
 }
 
