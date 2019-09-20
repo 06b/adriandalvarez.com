@@ -32,14 +32,28 @@
 /**
  * Typography
  *
- * 1. Default monospace user interface font in all browsers - https://github.com/csstools/sanitize.css/blob/master/typography.css
+ * 1. Based off of the default monospace & sans-serif user interface font in all browsers - https://github.com/csstools/sanitize.css/blob/master/typography.css
  * 2. Compatibility for default local fonts confirmed via - http://fontfamily.io/
  * 3. List of products that supply Cambria - https://docs.microsoft.com/en-us/typography/font-list/cambria#products-that-supply-this-font
  * 4. Caladea is a metric-adjusted version of Cambo which matches Cambria. https://wiki.debian.org/SubstitutingCalibriAndCambriaFonts, https://github.com/zachleat/font-family-reunion/issues/49 & https://en.wikipedia.org/wiki/Croscore_fonts
+ * 5. KaiOS uses Open Sans as the standard typeface on KaiOS. https://developer.kaiostech.com/design-guide/typography & https://medium.com/design-at-kai/optimizing-the-reading-experience-on-smart-feature-phones-11fb5658b59a
  *
  */
 
-    --font-family--sans-serif:
+    --font-family--sans-serif: /* 1 */
+    /* @font-face */ "Fira",
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* macOS Chrome */ "BlinkMacSystemFont",
+    /* Windows 6+ */ "Segoe UI",
+    /* Android 4+ / Chrome OS */ "Roboto",
+    /* KDE */ "Oxygen",
+    /* Ubuntu 10.10+ */ "Ubuntu",
+    /* Gnome 3+ */ "Cantarell",
+    /* KaiOS */ "Open Sans", /* 5 */
+    /* KDE Plasma 5+ */ "Noto Sans",
+    /* Firefox OS */ "Fira Sans",
+    /* macOS - Snow leopard 10.8.5+ & iOS - iPhone 6.0+ */"Avenir", /* 2 */
+    /* macOS - Snow leopard 10.6.8+ & iOS - iPhone 5.1+ */ "Helvetica Neue",  /* 2 */
     /* fallback */ sans-serif,
     /* macOS emoji */ "Apple Color Emoji",
     /* Windows emoji */ "Segoe UI Emoji",
@@ -66,7 +80,7 @@
     /* Ubuntu 14.04 / Fedora 20 */ "Bitstream Charter", /* 2 */
     /* Windows 6+ / Windows Phone 8.0 / Fedora 20 / Office 2007 / Office Mac 2008 */ "Cambria", /* 2 */ /* 3 */
     /* Chrome OS */ "Caladea", /* 4 */
-    /* macOS - Snow leopard 10.6.8 & iOS - iPhone 5.1 */ "Hoefler Text",
+    /* macOS - Snow leopard 10.6.8+ & iOS - iPhone 5.1+ */ "Hoefler Text",
     /* Linux/OpenOffice fallback */ "Liberation Serif", /* 2 */
     /* Windows 5+ / Windows Phone 7.5 / Android 4+ (will render Noto Serif as it's Aliased as Georgia) */ "Georgia", /* 2 */
     /* fallback */ serif,
