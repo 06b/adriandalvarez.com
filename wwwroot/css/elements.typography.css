@@ -5,6 +5,20 @@
  *
  */
 
+
+/**
+ * HTML
+ *
+ * 1. For accessibility, the base line-height should be 1.5 times the base font-size - http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
+ *
+ */
+
+html {
+    font-size: 16px;
+    line-height: 1.5; /* 1 */
+}
+
+
 /**
  * Body
  *
