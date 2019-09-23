@@ -34,6 +34,8 @@ html {
  *
  * 3. Set of figures where numbers are all lying on the baseline.
  *
+ * 4. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
+ *
  */
 
 body {
@@ -44,6 +46,7 @@ body {
     text-rendering: optimizeLegibility; /* 2 */
     font-variant-numeric: lining-nums /* 3 */;
     font-variant-ligatures: normal;
+    font-family: "Charter", "Bitstream Charter", "Cambria", "Caladea", "Hoefler Text", "Liberation Serif", "Georgia", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 }
 
 /**
