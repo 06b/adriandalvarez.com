@@ -32,6 +32,8 @@ html {
  *    `text-rendering: optimizeLegibility;` instructs the browser to emphasizes legibility over rendering speed and geometric precision and enables
  *    kerning and optional ligatures.
  *
+ * 3. Set of figures where numbers are all lying on the baseline.
+ *
  */
 
 body {
@@ -40,6 +42,8 @@ body {
     -ms-text-size-adjust: 100%; /* 1c */
     text-size-adjust: 100%; /* 1 */
     text-rendering: optimizeLegibility; /* 2 */
+    font-variant-numeric: lining-nums /* 3 */;
+    font-variant-ligatures: normal;
 }
 
 /**
