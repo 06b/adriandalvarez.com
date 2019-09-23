@@ -36,6 +36,8 @@ html {
  *
  * 4. Fallback for browsers that don't support Custom Properties: https://caniuse.com/#search=Custom%20Properties
  *
+ * 5. Test for browsers that support Custom Properties & adjust spacing for webfont via https://meowni.ca/font-style-matcher/
+ *
  */
 
 body {
@@ -47,6 +49,14 @@ body {
     font-variant-numeric: lining-nums /* 3 */;
     font-variant-ligatures: normal;
     font-family: "Charter", "Bitstream Charter", "Cambria", "Caladea", "Hoefler Text", "Liberation Serif", "Georgia", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+@supports (--i: 0) {
+    body {
+        font-family: var(--font-family--serif);
+        letter-spacing: -0.35px /* 5 */;
+        word-spacing: 0.1px /* 5 */;
+    }
 }
 
 /**
