@@ -1,0 +1,19 @@
+/**
+ * Headings
+ *
+ * Extra class names allow same font-size to be used on other elements to
+ * maintain the semantically appropriate heading levels.
+ *
+ */
+
+.u-h1{}
+
+.u-h2{}
+
+.u-h3{}
+
+.u-h4{}
+
+.u-h5{}
+
+.u-h6{}
