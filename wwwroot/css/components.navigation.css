@@ -84,8 +84,7 @@ nav a {
     color: currentColor;
 }
 
-nav a:hover
-{
+nav a:hover {
     /* Browsers that don't support `text-decoration-style: dashed` will hide underline on hover */
     /* TODO: Maybe instead invert the text & background? */
     text-decoration: none;

@@ -21,7 +21,6 @@ img {
 }
 
 img[width],
-img[height]
-{
+img[height] {
   max-width: none; /* 7 */
 }
