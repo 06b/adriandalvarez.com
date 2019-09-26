@@ -120,3 +120,7 @@ h6 {
     margin-bottom: 0;
     font-size: 1.0526315789473684210526315789474em; /* 20px / 19px */
 }
+
+footer {
+    font-size: ‭0.9375em; /* 15px / 16px */
+}
