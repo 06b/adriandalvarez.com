@@ -8,24 +8,30 @@
 
 .u-h1 {
     font-size: 63.130px;
+    font-size: var(--headings-font-size-h1);
 }
 
 .u-h2 {
     font-size: 59.989px;
+    font-size: var(--headings-font-size-h2);
 }
 
 .u-h3 {
     font-size: 47.359px;
+    font-size: var(--headings-font-size-h3);
 }
 
 .u-h4 {
     font-size: 45.003px;
+    font-size: var(--headings-font-size-h4);
 }
 
 .u-h5 {
     font-size: 35.528px;
+    font-size: var(--headings-font-size-h5);
 }
 
 .u-h6 {
     font-size: 26.653px;
+    font-size: var(--headings-font-size-h6);
 }

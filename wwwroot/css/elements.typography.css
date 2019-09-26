@@ -95,6 +95,7 @@ body {
 
 main {
     font-size: 1.1875em; /* 19px / 16px */
+    font-size: var(--font-size);
 }
 
 /**
@@ -123,4 +124,5 @@ h6 {
 
 footer {
     font-size: ‭0.9375em; /* 15px / 16px */
+    font-size: var(--font-size--smaller)
 }
