@@ -130,7 +130,7 @@ nav [aria-current="page"]:before {
     border-left: 5px solid #ebebeb;
     border-left-color: currentColor;
     position: absolute;
-    top: 1em;
+    top: 1.25em;
     left: 0.25em;
 }
 
