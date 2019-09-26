@@ -89,4 +89,28 @@
     /* Windows emoji */ "Segoe UI Symbol",
     /* Linux emoji */ "Noto Color Emoji";
 
+
+/**
+ * Modular Scale - https://www.modularscale.com/?19,15&px&1.333
+ *
+ * 19px @ Perfect Fourth (1.333)
+ * 15px @ Perfect Fourth (1.333)
+ *
+ *
+ */
+    --modular-scale-base: 1.1875rem; /* 19px / 16px = 1.1875 */
+    --modular-scale-base--alt: calc(var(--modular-scale-base) * 0.7894736842105263); /* 19px * 0.7894736842105263 = 15px */
+    --modular-scale-ratio--perfect-fourth : 1.333;
+
+    --modular-scale--1: calc(var(--modular-scale-base) * var(--modular-scale-ratio--perfect-fourth)); /* 19px * 1.333 = 25.327px */ /* u-h6 @ min-width:0 */
+    --modular-scale--2: calc(var(--modular-scale--1) * var(--modular-scale-ratio--perfect-fourth));   /* 25.327px * 1.333 = 33.760891px */ /* u-h3 & u-h4 @ min-width:0 */
+    --modular-scale--3: calc(var(--modular-scale--2) * var(--modular-scale-ratio--perfect-fourth));   /* 33.760891px * 1.333 = 45.003267703px */ /* u-h1 & u-h2 @ min-width:0 */ /* u-h4 @ min-width:64em */
+    --modular-scale--4: calc(var(--modular-scale--3) * var(--modular-scale-ratio--perfect-fourth));   /* 45.003267703px * 1.333 = 59.989355848099px */ /* u-h2 @ min-width:64em */
+
+    --modular-scale--1--alt: calc(var(--modular-scale-base--alt) * var(--modular-scale-ratio--perfect-fourth));  /* 15px * 1.333 = 19.995px */
+    --modular-scale--2--alt: calc(var(--modular-scale--1--alt) * var(--modular-scale-ratio--perfect-fourth));    /* 19.995px * 1.333 = 26.653px */ /* u-h5 @ min-width:0 */ /* u-h6 @ min-width:64em */
+    --modular-scale--3--alt: calc(var(--modular-scale--2--alt) * var(--modular-scale-ratio--perfect-fourth));    /* 26.653px * 1.333 = 35.528449‬px */ /* u-h3 @ min-width:25em */ /* u-h5 @ min-width:64em */
+    --modular-scale--4--alt: calc(var(--modular-scale--3--alt) * var(--modular-scale-ratio--perfect-fourth));    /* 35.528449px * 1.333 = 47.359422517‬‬px */ /* u-h1 & u-h2 @ min-width:25em */ /* u-h3 @ min-width:64em */
+    --modular-scale--5--alt: calc(var(--modular-scale--4--alt) * var(--modular-scale-ratio--perfect-fourth));    /* 47.359422517‬‬px * 1.333 = 63.130110215161‬‬px */ /* u-h1 @ min-width:64em */
+
 }
