@@ -75,12 +75,6 @@ body {
         }
     }
 
-    @media (min-width: 30em) {
-        body {
-            grid-column-gap: 1.5em;
-        }
-    }
-
     @media (min-width: 33.5em) {
         body {
             grid-template-areas: "navigation navigation" "portrait content";
@@ -90,7 +84,11 @@ body {
 
     @media (min-width: 50em) {
         body {
-            grid-template-columns: 14em 1fr;
+            grid-template-areas: ". navigation navigation ." ". portrait content .";
+            grid-template-columns: minmax(0.5em,1.5em) 14em minmax(45ch,1fr) minmax(0.5em,1.5em);
+            grid-column-gap: 1.5em;
+            width: auto;
+            max-width: 90em;
         }
     }
 }
