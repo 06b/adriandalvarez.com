@@ -41,6 +41,15 @@
 
     .window:nth-last-child(2) {
         grid-area: content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    [id="content"] {
+        max-width: 90ch;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
 }
 
@@ -80,6 +89,17 @@
     color: #1c1c1c; /* 1 */
     color: rgb(var(--palette-neutral-90));
     padding: 0.25em 0.5em;
+}
+
+@supports (display: grid) {
+    .window:nth-last-child(2) .window__body {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .window:nth-last-child(2) main {
+        flex-grow: 1;
+    }
 }
 
 @media (prefers-color-scheme: TODO-dark) {

@@ -173,13 +173,15 @@
             Document Viewer: @ViewData["Title"]
         </div>
         <div class="window__body">
-            <main role="main">
-                @RenderBody()
-            </main>
+            <div id="content">
+                <main role="main">
+                    @RenderBody()
+                </main>
 
-            <footer role="contentinfo">
-                &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
-            </footer>
+                <footer role="contentinfo">
+                    &copy; 2009 &ndash; @DateTime.Now.Year.ToString() Adrian D. Alvarez, All rights reserved.
+                </footer>
+            </div>
         </div>
     </div>
 <script src="~/js/modernizr.js"></script>
