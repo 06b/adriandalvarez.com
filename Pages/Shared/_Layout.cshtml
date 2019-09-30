@@ -173,6 +173,26 @@
             Document Viewer: @ViewData["Title"]
         </div>
         <div class="window__body">
+            <environment include="Development">
+                <style>
+                   /**
+                    * Vertical Rhythm - https://codepen.io/MadeByMike/pen/bEEGvv
+                    *
+                    * Note: If the lines seem to glitch out ocasionally it's not because the vertical rhythm is broken.
+                    *       The height of the gradient background that draws the lines on the body element is only rounded once,
+                    *       whereas real line hight is rounded on a per element basis.
+                    *
+                    * Line-height should be unitless, but for the sake of getting the vertical rhythm somewhat accurate, the line-height
+                    * will be set to match the line for the background line.
+                    *
+                    */
+                    [id="content"] {
+                        background-image: linear-gradient(rgba(200, 50, 50, .25) 1px, transparent 1px);
+                        background-size: 1px 1.78125rem;
+                        line-height: 1.78125rem; /* 1.1875em (font-size for main content) * 16px (html font-size) = 19px * 1.5 (line-height) = 28.5px / 16px (html font-size) = 1.78125 */
+                    }
+                </style>
+            </environment>
             <div id="content">
                 <main role="main">
                     @RenderBody()
