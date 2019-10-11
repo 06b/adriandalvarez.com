@@ -96,6 +96,27 @@
     </script>
     </environment>
 
+    <partial name="_Favicons" />
+
+    @{
+        // Canonical should update per url - for example - /about or /blog/post/abc
+        string CanonicalURL = Context.Request.Path;
+        string Domain = String.Format("{0}://{1}", Context.Request.Scheme, Context.Request.Host);
+        CanonicalURL = Domain + CanonicalURL.ToLowerInvariant();
+    }
+    <link href="@CanonicalURL" rel="canonical">
+    <meta content="@CanonicalURL" property="og:url">
+    <meta content="@CanonicalURL" property="twitter:url">
+    <meta content="website" property="og:type">
+    <meta content="summary" name="twitter:card">
+
+    <meta content="@Domain/android-chrome-256x256.png" name="twitter:image" property="og:image">
+    <meta content="256" property="og:image:width">
+    <meta content="256" property="og:image:height">
+    <meta content="Portrait of Adrian D. Alvarez" property="og:image:alt">
+
+    @RenderSection("headblock", required: false)
+
     @*<!--
         Support: Privacy - Twitter
         Details: If a site embeds tweets - prevent Twitter from tracking your visitors
@@ -103,7 +124,6 @@
     -->*@
     <meta content="on" name="twitter:dnt">
 
-    <partial name="_Favicons" />
 </head>
 <body id="adriandalvarez-com">
 
