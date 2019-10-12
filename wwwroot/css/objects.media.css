@@ -1,0 +1,34 @@
+/**
+ * Media Object Pattern
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ *
+ * The media object can be used any time you have an image or other media and text next to each other.
+ *
+ * Example Usage:
+ * <div class="o-media">
+ *     <a href="http://www.example.com" class="o-media__image">
+ *         <img src="http://example.com/images/example.png" alt="" />
+ *      </a>
+ *      <div class="o-media__body">
+ *      </div>
+ * </div>
+ *
+ */
+
+.o-media {
+    display: block;
+    margin: 1em;
+}
+
+.o-media__body {
+    overflow: hidden;
+}
+
+.o-media__image {
+    float: left;
+    margin-right: 1em;
+}
+
+.o-media__image img {
+    display: block;
+}
