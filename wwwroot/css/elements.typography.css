@@ -107,7 +107,6 @@ main {
  * Related: https://csswizardry.com/2016/02/managing-typography-on-large-apps/
  *
  * 1. Decrease the line-height of wrapped headings - https://twitter.com/heydonworks/status/672716556179283968
- * 2. Remove bottom margin to ensure vertical rhythm - https://csswizardry.com/2012/06/single-direction-margin-declarations/
  *
  */
 
@@ -118,8 +117,25 @@ h4,
 h5,
 h6 {
     line-height: 1.125; /* 1 */
-    margin-bottom: 0;
     font-size: 1.0526315789473684210526315789474em; /* 20px / 19px */
+}
+
+/**
+ * Vertical Rhythm Adjustments
+ *
+ * 1. Remove bottom margin to ensure vertical rhythm - https://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+main ol {
+    margin-bottom: 0; /* 1 */
 }
 
 main + footer {
