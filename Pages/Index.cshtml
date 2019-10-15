@@ -1,13 +1,20 @@
 ﻿@page
 @{
     ViewData["Title"] = "Home page";
+    ViewData["WindowTitle"] = "Home";
 }
 
-<h1>Adrian D. Alvarez</h1>
-<h2>Creative Tech&shy;nol&shy;o&shy;gist</h2>
-<p>
-    <span aria-hidden="true">&lt;🦄&gt; </span>
-    <strong>Creative Technologist &bull; noun</strong><br>
-    <span>A person who has an understanding of the creative process and is responsible for creating digital experiences applying creativity through code. </span>
-    <span aria-hidden="true">&lt;/🦄&gt;</span>
-</p>
+@section headblock
+{
+    <meta content="Front End Web Consultant specializing predominantly with dynamic content driven sites, focusing on both the UX &amp; UI in Cincinnati, Ohio." name="description">
+    <meta content="Front End Web Consultant specializing predominantly with dynamic content driven sites, focusing on both the UX &amp; UI in Cincinnati, Ohio." name="twitter:description" property="og:description">
+
+    <meta content="2018-02-24" property="article:published_time">
+    <meta content="2019-02-22" property="article:modified_time">
+}
+
+<h1 class="u-h1">Adrian D. Alvarez</h1>
+<h2 class="u-h2">Creative Tech&shy;nol&shy;o&shy;gist</h2>
+
+<strong>Creative Technologist &bull; noun</strong>
+<p>A person who has an understanding of the creative process and is responsible for creating digital experiences applying creativity through code. </p>
