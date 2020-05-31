@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Net.Http.Headers;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.StaticFiles;
 
 namespace AdrianDAlvarez
 {
@@ -42,6 +43,13 @@ namespace AdrianDAlvarez
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            // Set up custom content types - associating file extension to MIME type
+            var provider = new FileExtensionContentTypeProvider();
+
+             // Add new mappings
+            provider.Mappings[".webmanifest"] = "application/manifest+json";
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -70,7 +78,10 @@ namespace AdrianDAlvarez
             app.UseRewriter(options);
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                ContentTypeProvider = provider
+            });
             app.UseCookiePolicy();
 
             app.UseResponseCompression();
