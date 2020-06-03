@@ -104,7 +104,9 @@
  *
  *
  */
-    --modular-scale-base: 1.1875rem; /* 19px / 16px = 1.1875 */
+    --user-setting-scale: 1;
+
+    --modular-scale-base: calc(1.1875em * var(--user-setting-scale)); /* 19px / 16px = 1.1875 */
     --modular-scale-base--alt: calc(var(--modular-scale-base) * 0.7894736842105263); /* 19px * 0.7894736842105263 = 15px */
     --modular-scale-ratio--perfect-fourth : 1.333;
 
