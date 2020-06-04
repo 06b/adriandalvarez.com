@@ -10,7 +10,6 @@ a {
 main a {
     color: #0449a7;
     color: var(--palette-hyperlink-light);
-    font-weight: bold;
 }
 
 main a:visited {
