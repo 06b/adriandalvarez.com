@@ -1,0 +1,52 @@
+@page
+@{
+    ViewData["Title"] = "HyperText Log";
+    ViewData["WindowTitle"] = "hypertext.log";
+}
+
+<style>
+    .archive,
+    .archive ol {
+        padding-left: 0;
+    }
+
+    .archive li{
+        list-style: none;
+    }
+
+    .archive time {
+        font-weight: bold;
+    }
+
+    .archive .u-h5 {
+        margin-top: 0.765em;
+    }
+
+    .archive .u-h5 ~ .u-h5 {
+        margin-top: 0.52em;
+    }
+</style>
+<h1 class="u-h1">HyperText Log:</h1>
+<h2 class="u-h2">Archive</h2>
+<ol class="archive">
+    <li>
+        <h3 id="2019" class="u-h5">2019</h3>
+        <ol>
+            <li>
+                <time datetime="2019-12-31">31 Dec. 2019</time>
+                <a href="~/hypertext/log/the-favicon-is-hidden-in-the-details">The favicon is hidden in the details</a>
+            </li>
+        </ol>
+        <h3 id="2018" class="u-h5">2018</h3>
+        <ol>
+            <li>
+                <time datetime="2018-10-22">22 Oct. 2018</time>
+                <a href="~/hypertext/log/CindyLi">Farewell Cindy Li</a>
+            </li>
+            <li>
+                <time datetime="2018-02-24">24 Feb. 2018</time>
+                <a href="~/hypertext/log/destruction-of-our-past">Destruction of our Past </a>
+            </li>
+        </ol>
+    </li>
+</ol>
