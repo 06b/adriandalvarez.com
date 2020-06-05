@@ -39,5 +39,12 @@ details[open] > summary {
  */
 
 .details summary {
-    cursor: pointer;
+    pointer-events: none;
+}
+
+@media (min-width: 33.5em) {
+    .details summary {
+        cursor: pointer;
+        pointer-events: auto;
+    }
 }
