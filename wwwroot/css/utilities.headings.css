@@ -39,6 +39,14 @@
     }
 }
 
+.u-h3 {
+    margin-top: 0.65em;
+}
+
+.u-h3 + p {
+    margin-top: -0.165em;
+}
+
 .u-h4 {
     font-size: 45.003px;
     font-size: var(--headings-font-size-h4);
