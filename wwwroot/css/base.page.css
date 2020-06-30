@@ -63,7 +63,7 @@ body {
     body {
         display: grid;
         grid-column-gap: 1em;
-        grid-template-areas: "navigation" "portrait" "content";
+        grid-template-areas: "navigation" "content" "portrait";
         min-width: auto;
         max-width: none;
         padding: 0;
