@@ -39,7 +39,7 @@
         }
     }
 
-    .window:nth-last-child(2) {
+    .window:last-child {
         grid-area: content;
         display: flex;
         flex-direction: column;
@@ -92,12 +92,12 @@
 }
 
 @supports (display: grid) {
-    .window:nth-last-child(2) .window__body {
+    .window:last-child .window__body {
         display: flex;
         flex-grow: 1;
     }
 
-    .window:nth-last-child(2) main {
+    .window:last-child main {
         flex-grow: 1;
     }
 }
