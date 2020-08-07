@@ -46,6 +46,15 @@
     height: 100%;
     top: -1.8rem;
     z-index: 1;
+    padding: 0;
+}
+
+@supports (display: grid) {
+  @media (max-width: 20em) {
+    .portrait .window__body {
+      top: 0;
+    }
+  }
 }
 
 .portrait .scanlines {
