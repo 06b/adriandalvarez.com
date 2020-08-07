@@ -1,0 +1,68 @@
+/**
+ * Layout
+ *
+ */
+
+[id="container"] {
+    margin: 0 auto 1.5em;
+    min-width: 36.5em;
+    max-width: 36.5em;
+    width: 90%;
+    padding: 0 0.5em;
+}
+
+@supports (display: grid) {
+    [id="container"] {
+        display: grid;
+        grid-column-gap: 1em;
+        grid-template-areas: "navigation" "content" "portrait";
+        min-width: auto;
+        max-width: none;
+        padding: 0;
+    }
+
+    [id="container"] .window:last-child {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    [id="container"] .window:last-child .window__body {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    [id="container"] .window:last-child main {
+        flex-grow: 1;
+    }
+
+    [id="content"] {
+        max-width: 90ch;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    @media (min-width: 20em) {
+        [id="container"] {
+            grid-template-areas: "navigation portrait" "content content";
+        }
+    }
+
+    @media (min-width: 33.5em) {
+        [id="container"] {
+            grid-template-areas: "navigation navigation" "portrait content";
+            grid-template-columns: 10em 1fr;
+        }
+    }
+
+    @media (min-width: 50em) {
+        [id="container"] {
+            grid-template-areas: ". navigation navigation ." ". portrait content .";
+            grid-template-columns: minmax(0.5em,1.5em) 14em minmax(45ch,1fr) minmax(0.5em,1.5em);
+            grid-column-gap: 1.5em;
+            width: auto;
+            max-width: 90em;
+        }
+    }
+}

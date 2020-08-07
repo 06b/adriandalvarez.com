@@ -38,19 +38,6 @@
             margin-top: 1.5em;
         }
     }
-
-    .window:last-child {
-        grid-area: content;
-        display: flex;
-        flex-direction: column;
-    }
-
-    [id="content"] {
-        max-width: 90ch;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
 }
 
 @media (prefers-color-scheme: TODO-dark) {
@@ -89,17 +76,6 @@
     color: #1c1c1c; /* 1 */
     color: rgb(var(--palette-neutral-90));
     padding: 0.25em 0.5em;
-}
-
-@supports (display: grid) {
-    .window:last-child .window__body {
-        display: flex;
-        flex-grow: 1;
-    }
-
-    .window:last-child main {
-        flex-grow: 1;
-    }
 }
 
 @media (prefers-color-scheme: TODO-dark) {

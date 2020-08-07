@@ -52,46 +52,9 @@ body {
     background-image: repeating-linear-gradient(-45deg, rgba(28,28,28, 0.25), rgba(28, 28, 28, 0.25) 1px, transparent 1px, transparent 6px); /* 3 */
     background-image: repeating-linear-gradient(-45deg, rgba(var(--palette-neutral-90), 0.25), rgba(var(--palette-neutral-90), 0.25) 1px, transparent 1px, transparent 6px); /* texture patterns - https://codepen.io/bitmap/pen/jfKxm */
     background-size: 4px 4px;
-    margin: 0 auto 1.5em;
-    min-width: 36.5em;
-    max-width: 36.5em;
-    width: 90%;
-    padding: 0 0.5em;
+    margin: 0;
 }
 
-@supports (display: grid) {
-    body {
-        display: grid;
-        grid-column-gap: 1em;
-        grid-template-areas: "navigation" "content" "portrait";
-        min-width: auto;
-        max-width: none;
-        padding: 0;
-    }
-
-    @media (min-width: 20em) {
-        body {
-            grid-template-areas: "navigation portrait" "content content";
-        }
-    }
-
-    @media (min-width: 33.5em) {
-        body {
-            grid-template-areas: "navigation navigation" "portrait content";
-            grid-template-columns: 10em 1fr;
-        }
-    }
-
-    @media (min-width: 50em) {
-        body {
-            grid-template-areas: ". navigation navigation ." ". portrait content .";
-            grid-template-columns: minmax(0.5em,1.5em) 14em minmax(45ch,1fr) minmax(0.5em,1.5em);
-            grid-column-gap: 1.5em;
-            width: auto;
-            max-width: 90em;
-        }
-    }
-}
 
 @media (prefers-color-scheme: TODO-dark) {
     body {
