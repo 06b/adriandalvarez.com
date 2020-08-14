@@ -1,0 +1,14 @@
+/**
+ * Elements - Grouping elements
+ *
+ * Normalization of grouping elements as per https://html.spec.whatwg.org/multipage/grouping-content.html
+ *
+ */
+
+/**
+ * Add the correct display for IE 10+.
+ */
+
+ main {
+    display: block;
+}
