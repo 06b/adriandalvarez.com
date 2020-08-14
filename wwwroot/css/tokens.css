@@ -122,6 +122,8 @@
     --modular-scale--5--alt: calc(var(--modular-scale--4--alt) * var(--modular-scale-ratio--perfect-fourth));    /* 47.359422517‬‬px * 1.333 = 63.130110215161‬‬px */ /* u-h1 @ min-width:64em */
 
     --headings-font-size-h1: var(--modular-scale--3);
+    --headings-line-height-h1: 1.035;
+    --headings-margin-h1: 0.3em;
     --headings-font-size-h2: var(--modular-scale--3);
     --headings-font-size-h3: var(--modular-scale--2);
     --headings-font-size-h4: var(--modular-scale--2);
@@ -136,6 +138,7 @@
 @media (min-width: 25em) {
     :root {
         --headings-font-size-h1: var(--modular-scale--4--alt);
+        --headings-margin-h1: 0.72em;
         --headings-font-size-h2: var(--modular-scale--4--alt);
         --headings-font-size-h3: var(--modular-scale--3--alt);
     }

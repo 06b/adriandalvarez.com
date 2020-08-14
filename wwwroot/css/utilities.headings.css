@@ -16,6 +16,10 @@
     .u-h1 {
         font-family: var(--font-family--sans-serif);
         /* TODO: adjust spacing for webfont via https://meowni.ca/font-style-matcher/ */
+
+        /* At this point, assuming that the webfont has already loaded and browser supports css custom properties */
+        margin-top: var(--headings-margin-h1);
+        line-height: var(--headings-line-height-h1);
     }
 }
 
