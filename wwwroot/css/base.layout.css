@@ -36,12 +36,22 @@
         flex-grow: 1;
     }
 
+/**
+ * Support: "Legacy" Browsers (Samsung Internet Version 12.1.2.5, Edge 45.07.4.5059 on Android, Firefox 80.1.2 for Android)
+ * Details: `word-wrap` was originally a proprietary Internet Explorer-only feature that was eventually 
+ *           supported in all browsers despite not being a standard. It has since been renamed to overflow-wrap, 
+ *           with word-wrap being an alias. While most of the time browsers know it's OK to break the word, sadly
+ *           sometimes you still need to give it a little push via `word-break`, even if you need to use the deprecated
+ *           Non standard value of `word-break: break-word;`
+ *
+ */
     [id="content"] {
         max-width: 90ch;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
         overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     @media (min-width: 20em) {
