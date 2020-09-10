@@ -83,8 +83,8 @@ body {
  * document elements which would include <html> & <body>." Fixes the issue of :focus styles on load, it does appear to have the issue where clicking certain sections
  * of the site will apply :focus. 
  *
- * By chance, I stumble upon the U.S. Web Design System (USWDS) and noticed they were listing focusable elements instead of applying a global `*:focus` and 
- * included the comment of "Apply :focus behavior to focusable elements only (For IE 11)."
+ * By chance, I stumbled upon the U.S. Web Design System (USWDS) and noticed they were listing focusable elements instead of applying a global `*:focus`
+ * <https://github.com/uswds/uswds/blob/develop/src/stylesheets/global/_focus.scss> and included the comment of "Apply :focus behavior to focusable elements only (For IE 11)."
  *
  * Fix: Apply the :focus to focusable elements only.
  *
