@@ -74,10 +74,29 @@ body {
  * Details: According to Focusable Elements - Browser Compatibility Table by ally.js the <html> & <body> elements are tabbable (keyboard focusable) for IE.
  *          Also while the <html> element itself is not considered focusable, but some browsers may give it focus when focus is passed from browser UI to the document.
  * Supporting Details: https://allyjs.io/data-tables/focusable.html
- * Fix: Apply `:focus` to styles on child elements of the <body> rather than globally to all document elements which would include <html> & <body>.
+ *
+ * Additional Details: It seems that someone else ran into this same issue 
+ *
+ * " :focus on IE11 Win 8.1 seems to add focus styles on any clicked div. :/"  <https://twitter.com/James_M_South/status/575824911207395328> 
+ *
+ * This seems to still be the case with this issue, where the previous fix of "applying `:focus` to styles on child elements of the <body> rather than globally to all
+ * document elements which would include <html> & <body>." Fixes the issue of :focus styles on load, it does appear to have the issue where clicking certain sections
+ * of the site will apply :focus. 
+ *
+ * By chance, I stumble upon the U.S. Web Design System (USWDS) and noticed they were listing focusable elements instead of applying a global `*:focus` and 
+ * included the comment of "Apply :focus behavior to focusable elements only (For IE 11)."
+ *
+ * Fix: Apply the :focus to focusable elements only.
  *
  */
 
-body :focus {
+ input:not([disabled]):focus, 
+ select:not([disabled]):focus, 
+ textarea:not([disabled]):focus, 
+ button:not([disabled]):focus,
+ iframe:focus,
+ [href]:focus,
+ [tabindex]:focus, 
+ [contentEditable="true"]:focus  {
     outline: 2px dashed currentColor;
 }
