@@ -91,7 +91,7 @@ nav a:hover {
 }
 
 /**
- * Support: Microsoft Edge Version 78+ & Google Chrome Version 76+
+ * Support: Microsoft Edge Version 86- & Google Chrome Version 86-
  * Details: When using `text-underline-position: under;` it appears to cause a
  *          performance issue when adjusting the `text-decoration-style` on hover.
  * Supporting Details: https://crbug.com/991310
