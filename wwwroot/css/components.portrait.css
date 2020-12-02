@@ -34,8 +34,7 @@
 }
 
 .portrait .window__title {
-    padding-top: 0;
-    padding-bottom: 0;
+    display: flex;
     position: relative;
     z-index: 2;
 }
